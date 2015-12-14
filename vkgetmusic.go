@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/Kutabe/vk"
-	"github.com/antonholmquist/jason"
-	"github.com/kennygrant/sanitize"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"sync"
+
+	"github.com/Kutabe/vk"
+	"github.com/antonholmquist/jason"
+	"github.com/kennygrant/sanitize"
 )
 
 func getMusicAsync(wg *sync.WaitGroup, responseURL string, responseArtist string, responseTitle string) {
