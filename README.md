@@ -1,6 +1,6 @@
 # VK Get music
 
-Automatic vk.com music downloader writen in pure Go
+Automatic vk.com music downloader written in pure Go
 
 [![ReportCard](http://goreportcard.com/badge/wingrime/vkgetmusic)](http://goreportcard.com/report/wingrime/vkgetmusic)
 
@@ -16,7 +16,7 @@ go get -u github.com/wingrime/vkgetmusic
 ./vkgetmusc
 
 ```
-Write you login & pass as required and just wait.
+Write your login & pass as required and just wait.
 
 Loading are fully async so it get nearly all bandwidth is possible
 
