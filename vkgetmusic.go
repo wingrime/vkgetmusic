@@ -55,8 +55,7 @@ func main() {
 		responseURL, _ := responseElement.GetString("url")
 		responseArtist, _ := responseElement.GetString("artist")
 		responseTitle, _ := responseElement.GetString("title")
-
-		conCounter += 1
+		conCounter++
 		wg.Add(1)
 		go getMusicAsync(&wg, responseURL, responseArtist, responseTitle)
 		if conCounter > maxConnectionCount {
