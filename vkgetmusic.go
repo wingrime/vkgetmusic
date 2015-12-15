@@ -17,19 +17,19 @@ func getMusicAsync(wg *sync.WaitGroup, responseURL string, responseArtist string
 	defer wg.Done()
 	response, err := http.Get(responseURL)
 	if err != nil {
-		log.Print(err)
+		log.Println(err)
 		return
 	}
 	defer response.Body.Close()
 	audio, err := ioutil.ReadAll(response.Body)
 	if err != nil {
-		log.Print(err)
+		log.Println(err)
 		return
 	}
 	filename := sanitize.BaseName(responseArtist+" - "+responseTitle) + ".mp3"
 	err = ioutil.WriteFile(filename, audio, 0777)
 	if err != nil {
-		log.Print(err)
+		log.Println(err)
 		return
 	}
 	fmt.Printf("FILE DONE:%s\n", filename)
