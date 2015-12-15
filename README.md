@@ -1,12 +1,32 @@
 # VK Get music
 
+Automatic vk.com music downloader writen in pure Go
+
 [![ReportCard](http://goreportcard.com/badge/wingrime/vkgetmusic)](http://goreportcard.com/report/wingrime/vkgetmusic)
 
-Download all you music stored in VK.com to program dirrectory
+## Install
 
+```
+go get -u github.com/wingrime/vkgetmusic
+```
 
-based on Kutabe's source
+## Usage
 
+```
+./vkgetmusc
+
+```
+Write you login & pass as required and just wait.
+
+Loading are fully async so it get nearly all bandwidth is possible
+
+Based on Kutabe's source
 
 Request only login and password
+## Expected issues
+* Twofactor auth
+* Locales
+* ???
+
+
 
