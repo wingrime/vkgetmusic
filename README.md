@@ -13,8 +13,7 @@ go get -u github.com/wingrime/vkgetmusic
 ## Usage
 
 ```
-./vkgetmusc
-
+vkgetmusic
 ```
 Write your login & pass as required and just wait.
 
