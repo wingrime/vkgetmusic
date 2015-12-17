@@ -37,15 +37,18 @@ func getMusicAsync(wg *sync.WaitGroup, responseURL string, responseArtist string
 }
 func main() {
 	var wg sync.WaitGroup
-	var login, password string
+	var password string
 	maxConnectionCount := flag.Int("maxcon", 10, "Maximum number of download threads")
+	login := flag.String("login", "", "vk.com login(Email or Phone)")
 	flag.Parse()
 	fmt.Print("Automatic VK.com music downloader\n")
-	fmt.Print("Login(Email or Phone): ")
-	fmt.Scanf("%s\n", &login)
+	if *login == "" {
+		fmt.Print("Login(Email or Phone): ")
+		fmt.Scanf("%s\n", &login)
+	}
 	fmt.Print("Password: ")
 	fmt.Scanf("%s\n", &password)
-	user, err := vk.Auth(login, password)
+	user, err := vk.Auth(*login, password)
 	if err != nil {
 		log.Fatal(err)
 	}
