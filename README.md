@@ -17,7 +17,16 @@ vkgetmusic
 ```
 Write your login & pass as required and just wait.
 
-Loading are fully async so it get nearly all bandwidth is possible
+## Command line options
+```
+Usage of vkgetmusic:
+  -login string
+    	vk.com login(Email or Phone)
+  -maxcon int
+    	Maximum number of download threads (default 10)
+
+``` 
+
 
 Based on Kutabe's source
 
@@ -26,6 +35,3 @@ Request only login and password
 * Twofactor auth
 * Locales
 * ???
-
-
-
