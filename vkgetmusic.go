@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -37,7 +38,8 @@ func getMusicAsync(wg *sync.WaitGroup, responseURL string, responseArtist string
 func main() {
 	var wg sync.WaitGroup
 	var login, password string
-	const maxConnectionCount int = 10
+	maxConnectionCount := flag.Int("maxcon", 10, "Maximum number of download threads")
+	flag.Parse()
 	fmt.Print("Automatic VK.com music downloader\n")
 	fmt.Print("Login(Email or Phone): ")
 	fmt.Scanf("%s\n", &login)
@@ -59,7 +61,7 @@ func main() {
 		conCounter += 1
 		wg.Add(1)
 		go getMusicAsync(&wg, responseURL, responseArtist, responseTitle)
-		if conCounter > maxConnectionCount {
+		if conCounter > *maxConnectionCount {
 			wg.Wait()
 			conCounter = 0
 		}
