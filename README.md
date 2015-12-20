@@ -30,6 +30,5 @@ Usage of vkgetmusic:
 * Twofactor auth
 * Locales
 * ???
-*
 ## Acknowledgments
 Based on Kutabe's source
