@@ -26,12 +26,10 @@ Usage of vkgetmusic:
     	Maximum number of download threads (default 10)
 
 ``` 
-
-
-Based on Kutabe's source
-
-Request only login and password
 ## Expected issues
 * Twofactor auth
 * Locales
 * ???
+*
+## Acknowledgments
+Based on Kutabe's source
