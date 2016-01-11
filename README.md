@@ -31,5 +31,10 @@ Usage of vkgetmusic:
 * Locales
 * ???
 
+## TODOs
+* Travis CI
+* Real n threads download
+* CUI/GUI
+
 ## Acknowledgments
 * Based on Kutabe's source
